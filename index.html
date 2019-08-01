@@ -22,7 +22,7 @@
     <link rel="alternative" href="/atom.xml" title="Lotus&#39;s blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -279,22 +279,6 @@
       
         <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>​    在书上看到了关于键盘钩取的相关内容，参考其相关内容，自己写了一个获取键盘输入的py脚本</p>
 <p>首先，描述整体机制。</p>
-<ol>
-<li><p>设置钩子：通过user32.dll的SetWindowsHookExA()函数可以设置钩子，注册用于处理信息的钩子过程（回调函数）</p>
-</li>
-<li><p>注册钩链：注册后的钩子过程由钩链管理，钩链的最前面注册有钩子过程的指针。接下来，等待键盘输入类型的消息进入相关线程的队列。</p>
-</li>
-<li><p>键盘输入：用户使用键盘向计算机输入想要的信息。键盘控制器将用户输入转换为计算机可识别的信号，并传递给键盘驱动程序。</p>
-</li>
-<li><p>系统队列：来自键盘的信息进入操作系统管理的系统队列，等待进入负责处理信息的线程队列。</p>
-</li>
-<li><p>线程队列：消息进入处理线程后，不会被发送到相应窗口，而是发送给钩链中第一个指针所指的钩子过程。</p>
-</li>
-<li><p>消息钩取：来自线程队列的消息被传输给钩链中第一个指针（实际是指针所指的钩子过程）</p>
-</li>
-<li><p>钩子过程：钩子过程接收消息，执行程序员指定的动作。大部分黑客攻击代码都位于钩子过程。处理结束后，将消息传递给钩链的下一个指针，也称为回调函数。</p>
-</li>
-<li><p>钩链指针：消息被依次传递给钩链中指针所指的钩子过程。最后一个钩子过程处理完消息后，将消息传递给原先指定的窗口。</p>
 <p><em>
         
           <a class="article-more-a" href="/2019/04/26/获取界面输入的py脚本/#more">more >></a>
@@ -302,7 +286,7 @@
       
 
       
-    </em></p></li></ol></div>
+    </em></p></div>
     <div class="article-info article-info-index">
       
       
@@ -548,14 +532,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">c primer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -565,6 +541,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">c primer</a>
               </li>
             
             <div class="clearfix"></div>
