@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Lotus&#39;s blog</title>
+  <title>Archives: 2019/7 | Lotus&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="记录学习的一些东西">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Lotus&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2019/07/index.html">
 <meta property="og:site_name" content="Lotus&#39;s blog">
 <meta property="og:description" content="记录学习的一些东西">
 <meta property="og:locale" content="default">
@@ -164,46 +164,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-blog1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/07/19/blog1/" class="archive-article-date">
+  	<time datetime="2019-07-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-19</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/19/blog1/">C++学习总结（一）</a>
+      <a class="archive-article-title" href="/2019/07/19/blog1/">C++学习总结（一）</a>
     </h1>
   
 
-        
-        <a href="/2019/07/19/blog1/" class="archive-article-date">
-  	<time datetime="2019-07-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2.6.2节练习实现（主函数中各部分功能需分开。）</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sales_data</span> &#123;</span></span><br><span class="line"><span class="keyword">friend</span> <span class="built_in">std</span>::istream&amp; <span class="keyword">operator</span> &gt;&gt; (<span class="built_in">std</span>::istream&amp;, Sales_data&amp;);</span><br><span class="line"><span class="keyword">friend</span> <span class="built_in">std</span>::ostream&amp; <span class="keyword">operator</span> &lt;&lt; (<span class="built_in">std</span>::ostream&amp;, <span class="keyword">const</span> Sales_data&amp;);</span><br><span class="line"><span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span> &lt; (<span class="keyword">const</span> Sales_data&amp;, <span class="keyword">const</span> Sales_data&amp;);</span><br><span class="line"><span class="keyword">friend</span> <span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> Sales_data&amp;, <span class="keyword">const</span> Sales_data&amp;);</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        Sales_data() = <span class="keyword">default</span>;</span><br><span class="line">        Sales_data(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp;book): bookNo(book) &#123; &#125;</span><br><span class="line">        Sales_data(<span class="built_in">std</span>::istream &amp;is) &#123; is &gt;&gt; *<span class="keyword">this</span>; &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        Sales_data&amp; <span class="keyword">operator</span> += (<span class="keyword">const</span> Sales_data&amp;);</span><br><span class="line">        <span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">isbn</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> bookNo;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">string</span> bookNo;</span><br><span class="line">        <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> sellingprice = <span class="number">0.0</span>;</span><br><span class="line">        <span class="keyword">double</span> salesprice = <span class="number">0.0</span>;</span><br><span class="line">        <span class="keyword">double</span> discount = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">compareIsbn</span><span class="params">(<span class="keyword">const</span> Sales_data &amp;lhs, <span class="keyword">const</span> Sales_data &amp;rhs)</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span> lhs.isbn() == rhs.isbn();&#125;</span><br><span class="line">Sales_data <span class="keyword">operator</span> + (<span class="keyword">const</span> Sales_data&amp;, <span class="keyword">const</span> Sales_data&amp;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span> == (<span class="keyword">const</span> Sales_data &amp;lhs, <span class="keyword">const</span> Sales_data &amp;rhs)</span><br><span class="line">&#123;       </span><br><span class="line">        <span class="keyword">return</span> lhs.units_sold == rhs.units_sold &amp;&amp; </span><br><span class="line">                lhs.sellingprice == rhs.sellingprice &amp;&amp;</span><br><span class="line">                lhs.salesprice == rhs.salesprice &amp;&amp;</span><br><span class="line">                lhs.isbn() == rhs.isbn();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="keyword">operator</span> != (<span class="keyword">const</span> Sales_data &amp;lhs, <span class="keyword">const</span> Sales_data &amp;rhs)</span><br><span class="line">&#123; <span class="keyword">return</span> !(lhs == rhs);&#125;</span><br><span class="line"></span><br><span class="line">Sales_data&amp; Sales_data::<span class="keyword">operator</span> += (<span class="keyword">const</span> Sales_data&amp; rhs)</span><br><span class="line">&#123;       </span><br><span class="line">        units_sold += rhs.units_sold;</span><br><span class="line">        salesprice = (rhs.salesprice * rhs.units_sold + salesprice * units_sold)</span><br><span class="line">                / (rhs.units_sold + units_sold);</span><br><span class="line">        <span class="keyword">if</span>(sellingprice != <span class="number">0</span>)</span><br><span class="line">                discount = salesprice / sellingprice;</span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Sales_data <span class="keyword">operator</span> + (<span class="keyword">const</span> Sales_data&amp; lhs, <span class="keyword">const</span> Sales_data&amp; rhs)</span><br><span class="line">&#123;       </span><br><span class="line">        <span class="function">Sales_data <span class="title">ret</span><span class="params">(lhs)</span></span>;</span><br><span class="line">        ret += rhs;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::istream&amp; <span class="keyword">operator</span> &gt;&gt; (<span class="built_in">std</span>::istream&amp; in, Sales_data&amp; s)</span><br><span class="line">&#123;</span><br><span class="line">        in &gt;&gt; s.bookNo &gt;&gt; s.units_sold &gt;&gt; s.sellingprice &gt;&gt; s.salesprice;</span><br><span class="line">        <span class="keyword">if</span>(in &amp;&amp; s.sellingprice != <span class="number">0</span>)</span><br><span class="line">                s.discount = s.salesprice/s.sellingprice;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                s = Sales_data();</span><br><span class="line">        <span class="keyword">return</span> in;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">std</span>::ostream&amp; <span class="keyword">operator</span> &lt;&lt; (<span class="built_in">std</span>::ostream&amp; out, <span class="keyword">const</span> Sales_data&amp; s)</span><br><span class="line">&#123;</span><br><span class="line">        out &lt;&lt; s.isbn() &lt;&lt; <span class="string">" "</span> &lt;&lt; s.units_sold &lt;&lt; <span class="string">" "</span> &lt;&lt; s.sellingprice &lt;&lt; <span class="string">" "</span></span><br><span class="line">                &lt;&lt; s.salesprice &lt;&lt; <span class="string">" "</span> &lt;&lt; s.discount;</span><br><span class="line">        <span class="keyword">return</span> out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Sales_data book;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"输入销售记录："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; book)&#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">"ISBN、售出本数、原始价格、实售价格、折扣为"</span> &lt;&lt; book &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Sales_data trans1, trans2;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"输入两条相同的isbn的销售纪录："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; trans1 &gt;&gt; trans2;</span><br><span class="line">        <span class="keyword">if</span>(compareIsbn(trans1, trans2))</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">"汇总信息：ISBN、售出本数、原始价格、实售价格、折扣为 "</span> &lt;&lt; trans1 + trans2</span><br><span class="line">                        &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">"两本书的ISBN不同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        Sales_data total, trans;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"输入几条相同ISBN的销售记录:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">cin</span> &gt;&gt; total)&#123;</span><br><span class="line">                <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; trans)</span><br><span class="line">                        <span class="keyword">if</span>(compareIsbn(total, trans))</span><br><span class="line">                                total = total + trans;</span><br><span class="line">                        <span class="keyword">else</span>&#123;</span><br><span class="line">                                <span class="built_in">cout</span> &lt;&lt; <span class="string">"当前书籍ISBN不同"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">"有效汇总信息：ISBN、售出本数、原始价格、实售价格、折扣为"</span> &lt;&lt; total &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">"No data"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"输入若干销售记录："</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">cin</span> &gt;&gt; trans1)&#123;</span><br><span class="line">                <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; trans2)</span><br><span class="line">                        <span class="keyword">if</span>(compareIsbn(total, trans))</span><br><span class="line">                                num++;</span><br><span class="line">                        <span class="keyword">else</span>&#123;</span><br><span class="line">                                <span class="built_in">cout</span> &lt;&lt; trans1.isbn() &lt;&lt; <span class="string">"共有"</span> &lt;&lt; num &lt;&lt; <span class="string">"条记录"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">                                trans1 = trans2;</span><br><span class="line">                                num = <span class="number">1</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; trans1.isbn() &lt;&lt; <span class="string">"共有"</span> &lt;&lt; num &lt;&lt; <span class="string">"条记录"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; <span class="string">"No data"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
-<p>-1：decltype类型指示符 decltype(d) a=b;</p>
-<p>​        auto类型说明符 auto a = b;</p>
-<p>2：别名声明</p>
-<p>​    using  AND typedef</p>
-<p>​    using a = b;</p>
-<p>​    typedef a b;</p>
-<p>3: constexpr</p>
-<p>4: 顶层const</p>
-<p>​    底层const</p>
-<p>5.指针和引用 AND const</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -219,7 +207,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -232,330 +220,17 @@
 	</div>
 
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/19/blog1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-获取界面输入的py脚本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/26/获取界面输入的py脚本/">获取界面输入的py脚本</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/26/获取界面输入的py脚本/" class="archive-article-date">
-  	<time datetime="2019-04-26T12:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>​    在书上看到了关于键盘钩取的相关内容，参考其相关内容，自己写了一个获取键盘输入的py脚本</p>
-<p>首先，描述整体机制。</p>
-<ol>
-<li><p>设置钩子：通过user32.dll的SetWindowsHookExA()函数可以设置钩子，注册用于处理信息的钩子过程（回调函数）</p>
-</li>
-<li><p>注册钩链：注册后的钩子过程由钩链管理，钩链的最前面注册有钩子过程的指针。接下来，等待键盘输入类型的消息进入相关线程的队列。</p>
-</li>
-<li><p>键盘输入：用户使用键盘向计算机输入想要的信息。键盘控制器将用户输入转换为计算机可识别的信号，并传递给键盘驱动程序。</p>
-</li>
-<li><p>系统队列：来自键盘的信息进入操作系统管理的系统队列，等待进入负责处理信息的线程队列。</p>
-</li>
-<li>线程队列：消息进入处理线程后，不会被发送到相应窗口，而是发送给钩链中第一个指针所指的钩子过程。</li>
-<li>消息钩取：来自线程队列的消息被传输给钩链中第一个指针（实际是指针所指的钩子过程）</li>
-<li>钩子过程：钩子过程接收消息，执行程序员指定的动作。大部分黑客攻击代码都位于钩子过程。处理结束后，将消息传递给钩链的下一个指针，也称为回调函数。</li>
-<li>钩链指针：消息被依次传递给钩链中指针所指的钩子过程。最后一个钩子过程处理完消息后，将消息传递给原先指定的窗口。</li>
-</ol>
-<h3 id="结构："><a href="#结构：" class="headerlink" title="结构："></a>结构：</h3><p>​    SetWindowsHookExA（）函数</p>
-<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HHOOK WINAPI SetWindowsHookExA(</span><br><span class="line">	<span class="variable">_In_</span> int idHook,</span><br><span class="line">	<span class="variable">_In_</span> HOOKPROC lpfn,</span><br><span class="line">	<span class="variable">_In_</span> HINSTANCE hMod,</span><br><span class="line">	<span class="variable">_In_</span> DWORD dwThreadId</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<p>​    第一个参数是钩子类型，选择对何种类型的消息进行钩取</p>
-<p>​    第二个参数是钩子过程，</p>
-<p>​    第三个参数为要钩取的线程所属的DLL句柄，</p>
-<p>​    最后一个参数为要钩取的线程ID。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>​    相关代码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> ctypes.wintypes <span class="keyword">import</span> MSG</span><br><span class="line"><span class="keyword">from</span> ctypes.wintypes <span class="keyword">import</span> DWORD</span><br><span class="line"></span><br><span class="line">user32 = windll.user32 </span><br><span class="line"><span class="comment">#使用windll：使用windll声明user32与kernel32类型的变量。使用相应的DLL提供的函数时，格式为user32.API名称或kernel32.API名称</span></span><br><span class="line">kernel32 = windll.kernel32</span><br><span class="line"></span><br><span class="line">WH_KEYBOARD_LL = <span class="number">13</span></span><br><span class="line"><span class="comment">#变量声明：在win32API内部定义并使用的变量值，可以通过MSDN或网络搜索轻松获取。将其声明为变量并事先放入变量</span></span><br><span class="line">WM_KEYDOWN = <span class="number">0x0100</span></span><br><span class="line">CTRL_CODE = <span class="number">162</span></span><br><span class="line"><span class="comment">#定义类：定义拥有挂钩与拆钩功能的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KeyLogger</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.lUser32 = user32</span><br><span class="line">		self.hooked = <span class="literal">None</span></span><br><span class="line">	<span class="comment">#定义挂钩函数：使用user32DLL中的SetWindowsHookExA函数设置钩子。要监视的事件为WH_KEYBOARD_LL,范围设置为操作系统中运行的所有线程。</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">installHookProc</span><span class="params">(self,pointer)</span>:</span></span><br><span class="line">		self.hooked = self.lUser32.SetWindowsHookExA(</span><br><span class="line">			WH_KEYBOARD_LL,</span><br><span class="line">			pointer,</span><br><span class="line">			kernel32.GetModuleHandleW(<span class="literal">None</span>),</span><br><span class="line">			<span class="number">0</span></span><br><span class="line">		)</span><br><span class="line">		<span class="keyword">if</span> <span class="keyword">not</span> self.hooked:</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">    <span class="comment">#定义拆钩函数：UnhookWindowsHookExA（）函数。拆除之前设置的钩子。钩子会大大增加系统的负荷，用完必须拆除。</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">uninstallHookerProc</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">if</span> self.hooked <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		self.lUser32.UnhookWindowsHookEx(self.hooked)</span><br><span class="line">		self.hooked = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getFPTR</span><span class="params">(fn)</span>:</span><span class="comment">#获取函数指针，若想注册钩子过程（回调函数），必须传入函数指针。ctype为此提供了专门的方法。通过CFUNCTYPE（）函数指定SetWindowsHookExA（）函数所需的钩子过程的参数与参数类型。通过CMPFUNC（）函数获取内部声明的函数指针。</span></span><br><span class="line">	CMPFUNC = CFUNCTYPE(c_int,c_int,c_int,POINTER(c_void_p))</span><br><span class="line">	<span class="keyword">return</span> CMPFUNC(fn)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hookProc</span><span class="params">(nCode,wParam,lParam)</span>:</span><span class="comment">#定义钩子过程，钩子过程是一种回调函数，指定事件发生时，调用其执行相应处理。若到来的消息类型是WM_KEYDOWN，则将消息值输出到屏幕；若消息值与&lt;Ctrl&gt;键的值一致，则拆除钩子。处理完毕后，将控制权让给钩链中其他的钩子过程（CallNextHookEx（））。</span></span><br><span class="line">	<span class="keyword">if</span> wParam <span class="keyword">is</span> <span class="keyword">not</span> WM_KEYDOWN:</span><br><span class="line">		<span class="keyword">return</span> user32.CallNextHookEx(keyLogger.hooked,nCode,wParam,lParam)</span><br><span class="line">	hookedKey = chr(lParam[<span class="number">0</span>])</span><br><span class="line">	print(hookedKey)</span><br><span class="line">	<span class="keyword">if</span>(CTRL_CODE == int(lParam[<span class="number">0</span>])):</span><br><span class="line">		print(<span class="string">"Ctrl pressed,call uninstallHook()"</span>)</span><br><span class="line">		keyLogger.uninstallHookProc()</span><br><span class="line">		sys.exit(<span class="number">-1</span>)</span><br><span class="line">	<span class="keyword">return</span> user32.CallNextHookEx(keyLogger.hooked,nCode,wParam,lParam)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">startKeyLog</span><span class="params">()</span>:</span><span class="comment">#传递信息，GetMessageA（）函数监视队列，消息进入队列后取出消息，并传递给钩链中的第一个钩子。</span></span><br><span class="line">	msg = MSG()</span><br><span class="line">	user32.GetMessageA(byref(msg),<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">keyLogger = KeyLogger() <span class="comment">#start of hook process</span></span><br><span class="line"><span class="comment">#启动消息窃取，首先创建KeyLogger类，然后调用installHookProc（）函数设置钩子，同时注册钩子过程（回调函数）。最后调用startKeyLog（）函数，将进入队列的消息传递给钩链。</span></span><br><span class="line">pointer = getFPTR(hookProc)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> keyLogger.installHookProc(pointer):</span><br><span class="line">	print(<span class="string">"installed keyLogger"</span>)</span><br><span class="line"></span><br><span class="line">startKeyLog()</span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>​    类似的还可以用来对用户调用的API进行钩取。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Study//" class="article-tag-list-link color1">Study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/26/获取界面输入的py脚本/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于Hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/15/关于Hexo/">关于Hexo的学习（and Blog学习相关）</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/15/关于Hexo/" class="archive-article-date">
-  	<time datetime="2018-05-15T09:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Hexo主题的安装和如何编写博客文章"><a href="#Hexo主题的安装和如何编写博客文章" class="headerlink" title="Hexo主题的安装和如何编写博客文章"></a>Hexo主题的安装和如何编写博客文章</h3><h4 id="1-前记"><a href="#1-前记" class="headerlink" title="1.前记"></a>1.前记</h4><p>​    最后，还是在一股难以抗拒的“想要进步”的想法中，把博客弄好了。原来的那个电脑真的是太垃圾了，当初安装git的时候疯狂error······最后还是完成了~</p>
-<p>​    原来的那个域名也不知道去哪里了，气······，<a href="www.xlotusx.xyz">新买的域名</a>我倒是觉得还挺好看的，原来那个叫moe来着。不想了，xyz也不错不是。</p>
-<h4 id="2-关于hexo"><a href="#2-关于hexo" class="headerlink" title="2.关于hexo"></a>2.关于hexo</h4><p>​    五月份，最近真的是忙到心累，还得抽空搭博客，心累。上一次，我的博客是搭在搬瓦工上的······，还不错，体验很好。咋没了来着，忘记了<del>后来没钱续费了：)</del>。这一次的博客，最后还是选择搭在github上了<del>不要钱啊</del>。下面开始进入正题：</p>
-<p>​    Hexo是一款静态博客的生成器。我对静态的理解，就是有点像只读。或者是微信公众号编辑文章里面的浏览功能。对了，hexo的主题有一款叫<a href="https://github.com/ZEROKISEKI/hexo-theme-gal" target="_blank" rel="noopener">gal</a>的，很喜欢这个，但是安装这个主题的时候，遇到了很多错误，有机会去研究一下，没准能换主题。</p>
-<p>​    好吧，正式进入正题，不瞎聊了。以下正文内容是借鉴的<a href="http://lowrank.science/Hexo-Github/" target="_blank" rel="noopener">这个</a>，并且加上了一些自己的理解。</p>
-<h5 id="1-hexo的安装及前期工作"><a href="#1-hexo的安装及前期工作" class="headerlink" title="1.hexo的安装及前期工作"></a>1.hexo的安装及前期工作</h5><p>​    首先要想安装Hexo，你得先安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>和<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>，我用的是windows环境，所以我觉得最稳妥的方法应该是上官网下包，（前面附上的是Node和git的官网下载地址）。安装两个先置的时候，建议安装在系统盘······上一个电脑git安装在其他盘的时候，偶尔会出现问题，<em>当然如果能自己解决那些问题的话，不要在意。w</em></p>
-<p>​    在电脑的某一个位置，不一定是系统盘，建立一个用来保存你本地静态博客文件的文件夹，命名有格式要求<code>your_name.github.io</code>,这里的<code>your_name</code>是指你github的用户名，那么这里就出现了问题，为什么要跟github用户名一样？<del>废话。</del></p>
-<p>​    这里我们就要知道既然我们要把博客放在github的服务器上，那我们肯定是要有一些操作的。先说一下接下来我们的目的：建立一个名字是<code>your_name.github.io</code>的repository。</p>
-<p>​    首先当然得有一个github的账号，在头像那里的下拉页面里有your profile，再进入Repositories<del>（谷歌翻译：库）</del>，新建一个库,命名同文件夹，权限设成Public。这一步就完成了。</p>
-<p>​    接下来，再让我们把目光挪回新建的文件夹这里，<code>cmd</code>打开终端，<code>cd</code>到刚建立的文件夹里，cd换盘时直接输入如<code>D:</code>就可以了。接下来在终端中输入</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry "https://registry.npm.taobao.org"</span><br></pre></td></tr></table></figure>
-<p>​    这一步是为了将默认的NPM镜像替换成更快的其他镜像，接下来依次执行</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>​    一个新网站就建立成功了，<code>your_name.github.io</code>文件夹的各个目录文件的具体信息：</p>
-<ul>
-<li><p><code>_config.yml</code> 文件存放着网站的配置信息，可以在这里配置大部分的参数。（在这里更改主题，设置网站的信息之类的）</p>
-</li>
-<li><p><code>package.json</code> 文件存放着插件信息，从中可以查看那些插件已经安装。</p>
-</li>
-<li><p><code>scaffolds</code> 是模板文件夹，新建文章时，Hexo 会根据 scaffold 来建立文件，不过这个模板和后面的主题里指的模板不一样。</p>
-</li>
-<li><p><code>source</code> 是存放用户资源的地方的文件夹，除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线) 的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹（别急，等下会生成的），而其他文件会被拷贝过去。</p>
-</li>
-<li><p><code>themes</code> 主题文件夹，Hexo 会根据主题来生成静态页面，我们以后自己安装的主题也都会放在这个文件夹下面，默认的 landscape 主题已经在里面了，说实话默认的有点不好看。</p>
-</li>
-</ul>
-<h5 id="2-hexo-blog文章的编写"><a href="#2-hexo-blog文章的编写" class="headerlink" title="2.hexo-blog文章的编写"></a>2.hexo-blog文章的编写</h5><h6 id="1-文章的地址与格式"><a href="#1-文章的地址与格式" class="headerlink" title="1.文章的地址与格式"></a>1.文章的地址与格式</h6><p>​    在source文件夹中有一个  <code>_posts</code> 文件夹，我们的博客文章就存储在这里。格式为markdown文件，博客文章开头要加Front-matter，Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，比如</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="string">/7/13</span> <span class="number">20</span><span class="string">:46:25</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-<p>Front-matter的知识我也会在后面再开一个板块，继续学习·······</p>
-<p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>描述</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>layout</code></td>
-<td>布局</td>
-<td></td>
-</tr>
-<tr>
-<td><code>title</code></td>
-<td>标题</td>
-<td></td>
-</tr>
-<tr>
-<td><code>date</code></td>
-<td>建立日期</td>
-<td>文件建立日期</td>
-</tr>
-<tr>
-<td><code>updated</code></td>
-<td>更新日期</td>
-<td>文件更新日期</td>
-</tr>
-<tr>
-<td><code>comments</code></td>
-<td>开启文章的评论功能</td>
-<td>true</td>
-</tr>
-<tr>
-<td><code>tags</code></td>
-<td>标签（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td><code>categories</code></td>
-<td>分类（不适用于分页）</td>
-<td></td>
-</tr>
-<tr>
-<td><code>permalink</code></td>
-<td>覆盖文章网址</td>
-</tr>
-</tbody>
-</table>
-<pre><code>markdown文件的编写，推荐使用Typora。如果是使用记事本编辑，记住要另存为编写的文件，将编码格式更改为UTF-8，不然在测试页面时，会出现乱码等等问题。
-</code></pre><h6 id="2-关于分类和标签"><a href="#2-关于分类和标签" class="headerlink" title="2.关于分类和标签"></a>2.关于分类和标签</h6><p>​    分类和标签分别是categories和tags，格式比如</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories: </span><br><span class="line">- Study</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">- Blog</span><br><span class="line">- Hexo</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h6 id="分类方式的分歧"><a href="#分类方式的分歧" class="headerlink" title="分类方式的分歧"></a>分类方式的分歧</h6><p>如果您有过使用WordPress的经验，就很容易误解Hexo的分类方式。WordPress支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是Hexo不支持指定多个同级分类。下面的指定方法：<br>categories:<br>- Diary<br>- Life<br>会使分类<code>Life</code>成为<code>Diary</code>的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p>
-</blockquote>
-<h6 id="3-Front-matter"><a href="#3-Front-matter" class="headerlink" title="3.Front-matter"></a>3.Front-matter</h6><p>Front-matter除了使用YAML的格式以外，也可以使用JSON进行编写，只要将—替换为;;;即可，比如</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"title": "Hello World",</span><br><span class="line">"date": "2018/5/16 11:54:00"</span><br><span class="line">;;;</span><br></pre></td></tr></table></figure>
-<p>还有一些格式不能省略，<code>:</code>冒号后面要加空格。</p>
-<hr>
-<h3 id="记录一下学习配置hexo时遇到的问题和解决方法"><a href="#记录一下学习配置hexo时遇到的问题和解决方法" class="headerlink" title="记录一下学习配置hexo时遇到的问题和解决方法"></a>记录一下学习配置hexo时遇到的问题和解决方法</h3><h4 id="1-分类页面乱码"><a href="#1-分类页面乱码" class="headerlink" title="1.分类页面乱码"></a>1.分类页面乱码</h4><p>​    在生成categories文件夹之后，对  <code>index.md</code>进行了更改，格式应按照要求，用文章末尾的三个短横线进行分割。出错是因为在文首也添加了三个短横线。这时候就有一个问题了······在tags文件夹里，我没有按照格式在文首文末都加了三个短横线，但是标签文件夹并没有出错。只有categories在页面中出现了错误。</p>
-<h4 id="2-Typora中短横线加空格自动转换"><a href="#2-Typora中短横线加空格自动转换" class="headerlink" title="2.Typora中短横线加空格自动转换"></a>2.Typora中短横线加空格自动转换</h4><p>​    Typora中使用短横线加空格在：后面的情况（另起一段时，在文本中就不会出现），会自动转换成有序列表的符号，在Front-matter的编写中，我还以为这种特殊符号不符合要求，结果发现当文件用记事本打开时，这种转换就自动消失了，所以不用因为这个，担心文件的格式问题。</p>
-<h3 id="后记："><a href="#后记：" class="headerlink" title="后记："></a>后记：</h3><p>后续会继续更新补充~学习真好~</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Study//" class="article-tag-list-link color1">Study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/15/关于Hexo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -577,9 +252,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
