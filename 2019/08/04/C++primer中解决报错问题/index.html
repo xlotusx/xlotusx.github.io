@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Lotus&#39;s blog</title>
+  <title>Lotus&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习的一些东西">
-<meta property="og:type" content="website">
+  <meta name="description" content="title: C++primer中解决了is &amp;gt;&amp;gt; *this 报错问题 date: 2019/8/4 00:00:00 categories:   Study  tags:   c++  c++ primer    C++ primer 习题答案补充 解决is &amp;gt;&amp;gt; *this 报错问题，缺少对 &amp;gt;&amp;gt; 的定义。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Lotus&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/04/C++primer中解决报错问题/index.html">
 <meta property="og:site_name" content="Lotus&#39;s blog">
-<meta property="og:description" content="记录学习的一些东西">
+<meta property="og:description" content="title: C++primer中解决了is &amp;gt;&amp;gt; *this 报错问题 date: 2019/8/4 00:00:00 categories:   Study  tags:   c++  c++ primer    C++ primer 习题答案补充 解决is &amp;gt;&amp;gt; *this 报错问题，缺少对 &amp;gt;&amp;gt; 的定义。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-03T20:32:37.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lotus&#39;s blog">
-<meta name="twitter:description" content="记录学习的一些东西">
+<meta name="twitter:description" content="title: C++primer中解决了is &amp;gt;&amp;gt; *this 报错问题 date: 2019/8/4 00:00:00 categories:   Study  tags:   c++  c++ primer    C++ primer 习题答案补充 解决is &amp;gt;&amp;gt; *this 报错问题，缺少对 &amp;gt;&amp;gt; 的定义。">
   
     <link rel="alternative" href="/atom.xml" title="Lotus&#39;s blog" type="application/atom+xml">
   
@@ -156,166 +157,168 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-C++primer中解决报错问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: C++primer中解决了is &gt;&gt; *this 报错问题</p>
+<p>date: 2019/8/4 00:00:00</p>
+<p>categories: </p>
+<ul>
+<li>Study</li>
+</ul>
+<p>tags: </p>
+<ul>
+<li><p>c++</p>
+</li>
+<li><p>c++ primer</p>
+<hr>
+</li>
+</ul>
+<p>C++ primer 习题答案补充</p>
+<p>解决is &gt;&gt; *this 报错问题，<strong>缺少对 &gt;&gt; 的定义。</strong></p>
+<p><em><a id="more"></a></em></p>
+<p>Sales_data.h</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> SALES_DATA_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SALES_DATA_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sales_data</span>&#123;</span></span><br><span class="line"><span class="keyword">friend</span> <span class="built_in">std</span>::istream&amp; <span class="keyword">operator</span> &gt;&gt; (<span class="built_in">std</span>::istream&amp;, Sales_data&amp;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        Sales_data() = <span class="keyword">default</span>;</span><br><span class="line">        Sales_data(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp;book): bookNo(book) &#123; &#125;</span><br><span class="line">        Sales_data(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp;book, <span class="keyword">const</span> <span class="keyword">unsigned</span> num, <span class="keyword">const</span> <span class="keyword">double</span> sellp, <span class="keyword">const</span> <span class="keyword">double</span> salep);</span><br><span class="line">        Sales_data(<span class="built_in">std</span>::istream &amp;is);</span><br><span class="line">        <span class="built_in">std</span>::<span class="function"><span class="built_in">string</span> <span class="title">get</span><span class="params">()</span> <span class="keyword">const</span></span>&#123; <span class="keyword">return</span> bookNo; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">string</span> bookNo;</span><br><span class="line">        <span class="keyword">unsigned</span> units_sold = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> sellingprice = <span class="number">0.0</span>;</span><br><span class="line">        <span class="keyword">double</span> saleprice = <span class="number">0.0</span>;</span><br><span class="line">        <span class="keyword">double</span> discount = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Sales_data::Sales_data(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span> &amp;book, <span class="keyword">const</span> <span class="keyword">unsigned</span> num,</span><br><span class="line">                        <span class="keyword">const</span> <span class="keyword">double</span> sellp, <span class="keyword">const</span> <span class="keyword">double</span> salep)</span><br><span class="line">&#123;</span><br><span class="line">        bookNo = book;</span><br><span class="line">        units_sold = num;</span><br><span class="line">        sellingprice = sellp;</span><br><span class="line">        saleprice = salep;</span><br><span class="line">        <span class="keyword">if</span>(sellingprice != <span class="number">0</span>)</span><br><span class="line">                discount = saleprice / sellingprice;</span><br><span class="line">&#125;</span><br><span class="line">Sales_data::Sales_data(<span class="built_in">std</span>::istream &amp;is)&#123;</span><br><span class="line">        is &gt;&gt; *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">std</span>::istream&amp; <span class="keyword">operator</span> &gt;&gt; (<span class="built_in">std</span>::istream&amp; in, Sales_data&amp; s)</span><br><span class="line">&#123;</span><br><span class="line">        in &gt;&gt; s.bookNo &gt;&gt; s.units_sold &gt;&gt; s.sellingprice &gt;&gt; s.saleprice;</span><br><span class="line">        <span class="keyword">if</span>(in &amp;&amp; s.sellingprice != <span class="number">0</span>)</span><br><span class="line">                s.discount = s.saleprice/s.sellingprice;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                s = Sales_data();</span><br><span class="line">        <span class="keyword">return</span> in;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<p>解决了is &gt;&gt; *this报错，声明 &gt;&gt; 符号友元，同时进行定义。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/04/C++primer中解决报错问题/" class="archive-article-date">
-  	<time datetime="2019-08-03T20:33:38.145Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/04/C++primer中解决报错问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/04/C++(虚)继承类的内存占用大小/" class="archive-article-date">
-  	<time datetime="2019-08-03T20:33:38.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/04/C++(虚)继承类的内存占用大小/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/19/C++随笔（一）/" class="archive-article-date">
-  	<time datetime="2019-07-18T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/19/C++随笔（一）/">C++随笔（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c primer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Study//" class="article-tag-list-link color1">Study</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/26/获取界面输入的py脚本/" class="archive-article-date">
-  	<time datetime="2019-04-26T12:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/26/获取界面输入的py脚本/">获取界面输入的py脚本</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Study//" class="article-tag-list-link color1">Study</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2019/08/04/C++primer中解决报错问题/",
+  owner: 'xlotusx',
+  repo: 'xlotusx.github.io',
+  oauth: {
+    client_id: '8a21261f8178b23d1f06',
+    client_secret: '7a760f4ec90cd7bf3c3bc89dfcb5de178b8d7ebc',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -338,8 +341,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
