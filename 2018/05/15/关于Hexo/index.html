@@ -206,7 +206,7 @@
 </li>
 </ul>
 <h5 id="2-hexo-blog文章的编写"><a href="#2-hexo-blog文章的编写" class="headerlink" title="2.hexo-blog文章的编写"></a>2.hexo-blog文章的编写</h5><h6 id="1-文章的地址与格式"><a href="#1-文章的地址与格式" class="headerlink" title="1.文章的地址与格式"></a>1.文章的地址与格式</h6><p>​    在source文件夹中有一个  <code>_posts</code> 文件夹，我们的博客文章就存储在这里。格式为markdown文件，博客文章开头要加Front-matter，Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，比如</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hello</span> <span class="string">World</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2013</span><span class="string">/7/13</span> <span class="number">20</span><span class="string">:46:25</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>Front-matter的知识我也会在后面再开一个板块，继续学习·······</p>
 <p>以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
 <table>
@@ -261,7 +261,7 @@
 </table>
 <pre><code>markdown文件的编写，推荐使用Typora。如果是使用记事本编辑，记住要另存为编写的文件，将编码格式更改为UTF-8，不然在测试页面时，会出现乱码等等问题。
 </code></pre><h6 id="2-关于分类和标签"><a href="#2-关于分类和标签" class="headerlink" title="2.关于分类和标签"></a>2.关于分类和标签</h6><p>​    分类和标签分别是categories和tags，格式比如</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories: </span><br><span class="line">- Study</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">- Blog</span><br><span class="line">- Hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories: </span><br><span class="line">- Study</span><br><span class="line">tags:</span><br><span class="line">- Blog</span><br><span class="line">- Hexo</span><br></pre></td></tr></table></figure>
 <blockquote>
 <h6 id="分类方式的分歧"><a href="#分类方式的分歧" class="headerlink" title="分类方式的分歧"></a>分类方式的分歧</h6><p>如果您有过使用WordPress的经验，就很容易误解Hexo的分类方式。WordPress支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是Hexo不支持指定多个同级分类。下面的指定方法：<br>categories:<br>- Diary<br>- Life<br>会使分类<code>Life</code>成为<code>Diary</code>的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。</p>
 </blockquote>
@@ -539,15 +539,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">g++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
             
             <div class="clearfix"></div>
