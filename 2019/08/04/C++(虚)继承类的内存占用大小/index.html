@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Lotus&#39;s blog</title>
+  <title>C++(虚)继承类的内存占用大小 | Lotus&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: C++(虚)继承类的内存占用大小 date: 2019/8/4 00:00:00 categories:   Study  tags:   c++  虚继承  内存占用  首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。   计算一个类对象的大小时的规律： 1、空类、单一继承的空类、多重继">
+  <meta name="description" content="​    首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。">
+<meta name="keywords" content="c++,虚继承,内存占用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lotus&#39;s blog">
+<meta property="og:title" content="C++(虚)继承类的内存占用大小">
 <meta property="og:url" content="http://yoursite.com/2019/08/04/C++(虚)继承类的内存占用大小/index.html">
 <meta property="og:site_name" content="Lotus&#39;s blog">
-<meta property="og:description" content="title: C++(虚)继承类的内存占用大小 date: 2019/8/4 00:00:00 categories:   Study  tags:   c++  虚继承  内存占用  首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。   计算一个类对象的大小时的规律： 1、空类、单一继承的空类、多重继">
+<meta property="og:description" content="​    首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-03T21:07:49.958Z">
+<meta property="og:updated_time" content="2019-08-03T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lotus&#39;s blog">
-<meta name="twitter:description" content="title: C++(虚)继承类的内存占用大小 date: 2019/8/4 00:00:00 categories:   Study  tags:   c++  虚继承  内存占用  首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。   计算一个类对象的大小时的规律： 1、空类、单一继承的空类、多重继">
+<meta name="twitter:title" content="C++(虚)继承类的内存占用大小">
+<meta name="twitter:description" content="​    首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。">
   
     <link rel="alternative" href="/atom.xml" title="Lotus&#39;s blog" type="application/atom+xml">
   
@@ -160,25 +161,25 @@
             <article id="post-C++(虚)继承类的内存占用大小" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++(虚)继承类的内存占用大小
+    </h1>
+  
+
+        
+        <a href="/2019/08/04/C++(虚)继承类的内存占用大小/" class="archive-article-date">
+  	<time datetime="2019-08-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: C++(虚)继承类的内存占用大小</p>
-<p>date: 2019/8/4 00:00:00</p>
-<p>categories: </p>
-<ul>
-<li>Study</li>
-</ul>
-<p>tags: </p>
-<ul>
-<li><p>c++</p>
-</li>
-<li><p>虚继承</p>
-</li>
-<li><p>内存占用</p>
-<hr>
-<pre><code>首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。
-</code></pre></li>
-</ul>
+        <p>​    首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。</p>
+<p><em><a id="more"></a></em></p>
 <p><strong>计算一个类对象的大小时的规律：</strong></p>
 <p>1、空类、单一继承的空类、多重继承的空类所占空间大小为：1（字节，下同）；</p>
 <p>2、一个类中，虚函数本身、成员函数（包括静态与非静态）和静态数据成员都是不占用类对象的存储空间的；</p>
@@ -187,7 +188,6 @@
 <p>5、虚承继的情况：由于涉及到虚函数表和虚基表，会同时增加一个（多重虚继承下对应多个）vfPtr指针指向虚函数表vfTable和一个vbPtr指针指向虚基表vbTable，这两者所占的空间大小为：8（或8乘以多继承时父类的个数）；</p>
 <p>6、在考虑以上内容所占空间的大小时，还要注意编译器下的“补齐”padding的影响，即编译器会插入多余的字节补齐；</p>
 <p>7、类对象的大小=各非静态数据成员（包括父类的非静态数据成员但都不包括所有的成员函数）的总和+ vfptr指针(多继承下可能不止一个)+vbptr指针(多继承下可能不止一个)+编译器额外增加的字节。</p>
-<p><em><a id="more"></a></em></p>
 <p><strong>示例一：含有普通继承</strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>     </span></span><br><span class="line"><span class="class">&#123;</span>     </span><br><span class="line">&#125;;  </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>     </span></span><br><span class="line"><span class="class">&#123;</span>      </span><br><span class="line"><span class="keyword">char</span> ch;         </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">func0</span><span class="params">()</span>  </span>&#123;  &#125;   </span><br><span class="line">&#125;;    </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span>    </span></span><br><span class="line"><span class="class">&#123;</span>      </span><br><span class="line"><span class="keyword">char</span> ch1;      </span><br><span class="line"><span class="keyword">char</span> ch2;      </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">func</span><span class="params">()</span>  </span>&#123;  &#125;        </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span>  </span>&#123;  &#125;   </span><br><span class="line">&#125;;   </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span>:</span> <span class="keyword">public</span> A, <span class="keyword">public</span> C  &#123;</span><br><span class="line"><span class="keyword">int</span> d;         </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">func</span><span class="params">()</span>  </span>&#123;  &#125;       </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span>  </span>&#123;  &#125;  </span><br><span class="line">&#125;;      </span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">E</span>:</span> <span class="keyword">public</span> B, <span class="keyword">public</span> C  &#123;         </span><br><span class="line"><span class="keyword">int</span> e;         </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">func0</span><span class="params">()</span>  </span>&#123;  &#125;       </span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span>  </span>&#123;  &#125;  </span><br><span class="line">&#125;;   </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span>&#123;      </span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"A="</span>&lt;&lt;<span class="keyword">sizeof</span>(A)&lt;&lt;<span class="built_in">endl</span>;    <span class="comment">//result=1      </span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"B="</span>&lt;&lt;<span class="keyword">sizeof</span>(B)&lt;&lt;<span class="built_in">endl</span>;    <span class="comment">//result=8          </span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"C="</span>&lt;&lt;<span class="keyword">sizeof</span>(C)&lt;&lt;<span class="built_in">endl</span>;    <span class="comment">//result=8      </span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"D="</span>&lt;&lt;<span class="keyword">sizeof</span>(D)&lt;&lt;<span class="built_in">endl</span>;    <span class="comment">//result=12      </span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"E="</span>&lt;&lt;<span class="keyword">sizeof</span>(E)&lt;&lt;<span class="built_in">endl</span>;    <span class="comment">//result=20      </span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>前面三个A、B、C类的内存占用空间大小就不需要解释了，注意一下内存对齐就可以理解了。</p>
@@ -221,7 +221,37 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚继承</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">内存占用</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Study//" class="article-tag-list-link color1">Study</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -285,18 +315,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/04/C++primer中解决报错问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/01/Linuxg++c++/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux环境下使用g++编译C++文件</div>
+    <a href="/2019/08/04/C++primer中解决报错问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++primer中解决了is &gt;&gt; *this 报错问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -455,7 +476,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚继承</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内存占用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">c++primer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c primer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -464,10 +501,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">

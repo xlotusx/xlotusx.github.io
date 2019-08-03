@@ -158,30 +158,30 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-C++primer中解决报错问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C++(虚)继承类的内存占用大小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/04/C++(虚)继承类的内存占用大小/">C++(虚)继承类的内存占用大小</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/04/C++(虚)继承类的内存占用大小/" class="archive-article-date">
+  	<time datetime="2019-08-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: C++primer中解决了is &gt;&gt; *this 报错问题</p>
-<p>date: 2019/8/4 00:00:00</p>
-<p>categories: </p>
-<ul>
-<li>Study</li>
-</ul>
-<p>tags: </p>
-<ul>
-<li><p>c++</p>
-</li>
-<li><p>c++ primer</p>
-<hr>
-</li>
-</ul>
-<p>C++ primer 习题答案补充</p>
-<p>解决is &gt;&gt; *this 报错问题，<strong>缺少对 &gt;&gt; 的定义。</strong></p>
+        <p>​    首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。</p>
 <p><em>
         
-          <a class="article-more-a" href="/2019/08/04/C++primer中解决报错问题/#more">more >></a>
+          <a class="article-more-a" href="/2019/08/04/C++(虚)继承类的内存占用大小/#more">more >></a>
         
       
 
@@ -190,11 +190,41 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚继承</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">内存占用</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Study//" class="article-tag-list-link color1">Study</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/04/C++primer中解决报错问题/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/04/C++(虚)继承类的内存占用大小/">展开全文 >></a>
         </p>
       
 
@@ -224,39 +254,31 @@
 
 
   
-    <article id="post-C++(虚)继承类的内存占用大小" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C++primer中解决报错问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/04/C++primer中解决报错问题/">C++primer中解决了is &gt;&gt; *this 报错问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/04/C++primer中解决报错问题/" class="archive-article-date">
+  	<time datetime="2019-08-03T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-04</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: C++(虚)继承类的内存占用大小</p>
-<p>date: 2019/8/4 00:00:00</p>
-<p>categories: </p>
-<ul>
-<li>Study</li>
-</ul>
-<p>tags: </p>
-<ul>
-<li><p>c++</p>
-</li>
-<li><p>虚继承</p>
-</li>
-<li><p>内存占用</p>
-<hr>
-<pre><code>首先，平时所声明的类只是一种类型定义，它本身是没有大小可言的。 因此，如果用sizeof运算符对一个类型名操作，那得到的是具有该类型实体的大小。
-</code></pre></li>
-</ul>
-<p><strong>计算一个类对象的大小时的规律：</strong></p>
-<p>1、空类、单一继承的空类、多重继承的空类所占空间大小为：1（字节，下同）；</p>
-<p>2、一个类中，虚函数本身、成员函数（包括静态与非静态）和静态数据成员都是不占用类对象的存储空间的；</p>
-<p>3、因此一个对象的大小≥所有非静态成员大小的总和；</p>
-<p>4、当类中声明了虚函数（不管是1个还是多个），那么在实例化对象时，编译器会自动在对象里安插一个指针vPtr指向虚函数表VTable；</p>
-<p>5、虚承继的情况：由于涉及到虚函数表和虚基表，会同时增加一个（多重虚继承下对应多个）vfPtr指针指向虚函数表vfTable和一个vbPtr指针指向虚基表vbTable，这两者所占的空间大小为：8（或8乘以多继承时父类的个数）；</p>
-<p>6、在考虑以上内容所占空间的大小时，还要注意编译器下的“补齐”padding的影响，即编译器会插入多余的字节补齐；</p>
-<p>7、类对象的大小=各非静态数据成员（包括父类的非静态数据成员但都不包括所有的成员函数）的总和+ vfptr指针(多继承下可能不止一个)+vbptr指针(多继承下可能不止一个)+编译器额外增加的字节。</p>
+        <p>C++ primer 习题答案补充</p>
+<p>解决is &gt;&gt; *this 报错问题，<strong>缺少对 &gt;&gt; 的定义。</strong></p>
 <p><em>
         
-          <a class="article-more-a" href="/2019/08/04/C++(虚)继承类的内存占用大小/#more">more >></a>
+          <a class="article-more-a" href="/2019/08/04/C++primer中解决报错问题/#more">more >></a>
         
       
 
@@ -265,11 +287,37 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">c++primer</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Study//" class="article-tag-list-link color1">Study</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/04/C++(虚)继承类的内存占用大小/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/04/C++primer中解决报错问题/">展开全文 >></a>
         </p>
       
 
@@ -770,7 +818,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚继承</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">内存占用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">c++primer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">c primer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -779,10 +843,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
